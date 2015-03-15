@@ -7,17 +7,34 @@ local anzahl = {}
 
 minetest.register_node("mymillwork:machine", {
 	description = "Millwork Machine",
-	tiles = {"mymillwork_machine_top.png",
+	tiles = {
 		"mymillwork_machine_top.png",
-		"mymillwork_machine_side.png",
-		"mymillwork_machine_side.png",
+		"mymillwork_machine_bottom.png",
+		"mymillwork_machine_side2.png",
+		"mymillwork_machine_side1.png",
 		"mymillwork_machine_back.png",
-		"mymillwork_machine_front.png",
+		"mymillwork_machine_front.png"
 		},
-	drawtype = "normal",
+	drawtype = "nodebox",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {oddly_breakable_by_hand=2, cracky=3, dig_immediate=1},
+	node_box = {
+		type = "fixed",
+		fixed = {
+			{-0.5, -0.1875, -0.5, 0.5, -0.0625, 0.5}, -- Table
+			{-0.5, -0.5, -0.5, -0.3125, -0.1875, -0.3125}, -- leg
+			{-0.5, -0.5, 0.3125, -0.3125, -0.1875, 0.5}, -- leg
+			{0.3125, -0.5, 0.3125, 0.5, -0.1875, 0.5}, -- leg
+			{0.3125, -0.5, -0.5, 0.5, -0.1875, -0.3125}, -- leg
+			{0, -0.0625, 0.25, 0.0625, 0.375, 0.5}, -- verticle
+			{-0.125, -0.0625, 0.25, -0.0625, 0.375, 0.5}, -- verticle
+			{-0.1875, 0.125, -0.3125, 0.125, 0.5, 0.0625}, -- motor
+			{-0.125, 0.375, 0.0625, 0.0625, 0.5, 0.5}, -- arm
+			{-0.0625, 0.0625, -0.3125, 0, 0.125, 0.0625}, -- blade
+			{-0.0625, 0, -0.25, 0, 0.125, 0}, -- blade
+		}
+	},
 
 -- Set owner of Millwork Machine
 	after_place_node = function(pos, placer)
@@ -41,44 +58,44 @@ on_construct = function(pos)
 	local meta = minetest.env:get_meta(pos)
 	meta:set_string("formspec", "invsize[10,11;]"..
 		"background[-0.15,-0.25;10.40,11.75;mymillwork_background.png]"..
-		"list[current_name;ingot;8.5,7.5;1,1;]"..
-		"list[current_name;res;8.5,10;1,1;]"..
-		"label[8.5,7;Input:]"..
-		"label[8.5,9.5;Output:]"..
+		"list[current_name;ingot;7,5.5.5;1,1;]"..
+		"list[current_name;res;8.5,5.5;1,1;]"..
+		"label[7,5;Input:]"..
+		"label[8.5,5;Output:]"..
 		"label[0,0;Choose Millwork:]"..
 
 		"label[0.5,0.5;Crown Mould]"..
-		"image_button[1,1;1,1;mymillwork_mach1.png;crownmould; ]"..
-		"image_button[2,1;1,1;mymillwork_mach2.png;crownmould_ic; ]"..
-		"image_button[3,1;1,1;mymillwork_mach3.png;crownmould_oc; ]"..
-		"image_button[4,1;1,1;mymillwork_mach4.png;crownmould_beam; ]"..
+		"image_button[0.5,1;1,1;mymillwork_mach1.png;crownmould; ]"..
+		"image_button[1.5,1;1,1;mymillwork_mach2.png;crownmould_ic; ]"..
+		"image_button[2.5,1;1,1;mymillwork_mach3.png;crownmould_oc; ]"..
+		"image_button[3.5,1;1,1;mymillwork_mach4.png;crownmould_beam; ]"..
 
 		"label[0.5,2;Columns]"..
-		"image_button[1,2.5;1,1;mymillwork_mach5.png;column; ]"..
-		"image_button[2,2.5;1,1;mymillwork_mach6.png;column_base; ]"..
-		"image_button[3,2.5;1,1;mymillwork_mach7.png;column_half; ]"..
-		"image_button[4,2.5;1,1;mymillwork_mach8.png;column_half_base; ]"..
-		"image_button[5,2.5;1,1;mymillwork_mach9.png;column_half_wbeam; ]"..
-		"image_button[6,2.5;1,1;mymillwork_mach10.png;column_quarter; ]"..
-		"image_button[7,2.5;1,1;mymillwork_mach11.png;column_quarter_base; ]"..
-		"image_button[8,2.5;1,1;mymillwork_mach12.png;column_quarter_wbase; ]"..
-		"image_button[9,2.5;1,1;mymillwork_mach13.png;column_quarter_fancybase; ]"..
+		"image_button[0.5,2.5;1,1;mymillwork_mach5.png;column; ]"..
+		"image_button[1.5,2.5;1,1;mymillwork_mach6.png;column_base; ]"..
+		"image_button[2.5,2.5;1,1;mymillwork_mach7.png;column_half; ]"..
+		"image_button[3.5,2.5;1,1;mymillwork_mach8.png;column_half_base; ]"..
+		"image_button[4.5,2.5;1,1;mymillwork_mach9.png;column_half_wbeam; ]"..
+		"image_button[5.5,2.5;1,1;mymillwork_mach10.png;column_quarter; ]"..
+		"image_button[6.5,2.5;1,1;mymillwork_mach11.png;column_quarter_base; ]"..
+		"image_button[7.5,2.5;1,1;mymillwork_mach12.png;column_quarter_wbase; ]"..
+		"image_button[8.5,2.5;1,1;mymillwork_mach13.png;column_quarter_fancybase; ]"..
 
 		"label[0.5,3.5;Ceiling and Beams]"..
-		"image_button[1,4;1,1;mymillwork_mach14.png;ceiling; ]"..
-		"image_button[2,4;1,1;mymillwork_mach15.png;ceiling_post; ]"..
-		"image_button[3,4;1,1;mymillwork_mach16.png;beam; ]"..
-		"image_button[4,4;1,1;mymillwork_mach17.png;beam_t; ]"..
-		"image_button[5,4;1,1;mymillwork_mach18.png;beam_ceiling_t; ]"..
+		"image_button[0.5,4;1,1;mymillwork_mach14.png;ceiling; ]"..
+		"image_button[1.5,4;1,1;mymillwork_mach15.png;ceiling_post; ]"..
+		"image_button[2.5,4;1,1;mymillwork_mach16.png;beam; ]"..
+		"image_button[3.5,4;1,1;mymillwork_mach17.png;beam_t; ]"..
+		"image_button[4.5,4;1,1;mymillwork_mach18.png;beam_ceiling_t; ]"..
 
 		"label[0.5,5;Base]"..
-		"image_button[1,5.5;1,1;mymillwork_mach19.png;base; ]"..
-		"image_button[2,5.5;1,1;mymillwork_mach20.png;base_ic; ]"..
-		"image_button[3,5.5;1,1;mymillwork_mach21.png;base_oc; ]"..
-		"image_button[4,5.5;1,1;mymillwork_mach22.png;base_fancy; ]"..
-		"image_button[5,5.5;1,1;mymillwork_mach23.png;base_fancy_ic; ]"..
-		"image_button[6,5.5;1,1;mymillwork_mach24.png;base_fancy_oc; ]"..
-		"list[current_player;main;0,7;8,4;]")
+		"image_button[0.5,5.5;1,1;mymillwork_mach19.png;base; ]"..
+		"image_button[1.5,5.5;1,1;mymillwork_mach20.png;base_ic; ]"..
+		"image_button[2.5,5.5;1,1;mymillwork_mach21.png;base_oc; ]"..
+		"image_button[3.5,5.5;1,1;mymillwork_mach22.png;base_fancy; ]"..
+		"image_button[4.5,5.5;1,1;mymillwork_mach23.png;base_fancy_ic; ]"..
+		"image_button[5.5,5.5;1,1;mymillwork_mach24.png;base_fancy_oc; ]"..
+		"list[current_player;main;1,7;8,4;]")
 	meta:set_string("infotext", "Millwork Machine")
 	local inv = meta:get_inventory()
 	inv:set_size("ingot", 1)
