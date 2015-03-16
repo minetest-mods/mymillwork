@@ -3,7 +3,6 @@ local shape = {}
 local make_ok = {}
 local anzahl = {}
 
---function mymillwork.register_all(mat, desc, image, groups, craft)
 
 minetest.register_node("mymillwork:machine", {
 	description = "Millwork Machine",
@@ -36,7 +35,6 @@ minetest.register_node("mymillwork:machine", {
 		}
 	},
 
--- Set owner of Millwork Machine
 	after_place_node = function(pos, placer)
 	local meta = minetest.env:get_meta(pos);
 			meta:set_string("owner",  (placer:get_player_name() or ""));
@@ -106,7 +104,6 @@ on_receive_fields = function(pos, formname, fields, sender)
 	local meta = minetest.env:get_meta(pos)
 	local inv = meta:get_inventory()
 
--- REGISTER MILLING PROGRAMMS
 -----------------------------
 if fields["crownmould"] 
 or fields["crownmould_ic"]
@@ -362,6 +359,8 @@ then
 		local ingotstack = inv:get_stack("ingot", 1)
 		local resstack = inv:get_stack("res", 1)
 ----------------------------------------------------------------------
+--Register Items
+----------------------------------------------------------------------
 		if ingotstack:get_name()=="default:sandstone" then
 				material = "default_sandstone"
 				make_ok = "1"
@@ -424,6 +423,200 @@ then
 
 		if ingotstack:get_name()=="default:dirt" then
 				material = "default_dirt"
+				make_ok = "1"
+		end
+
+		if ingotstack:get_name()=="default:brick" then
+				material = "default_brick"
+				make_ok = "1"
+		end
+
+		if ingotstack:get_name()=="default:bronzeblock" then
+				material = "default_bronze_block"
+				make_ok = "1"
+		end
+
+		if ingotstack:get_name()=="default:coalblock" then
+				material = "default_coal_block"
+				make_ok = "1"
+		end
+
+		if ingotstack:get_name()=="default:copperblock" then
+				material = "default_copper_block"
+				make_ok = "1"
+		end
+
+		if ingotstack:get_name()=="default:desert_cobble" then
+				material = "default_desert_cobble"
+				make_ok = "1"
+		end
+
+		if ingotstack:get_name()=="default:diamondblock" then
+				material = "default_diamond_block"
+				make_ok = "1"
+		end
+
+		if ingotstack:get_name()=="default:glass" then
+				material = "default_glass"
+				make_ok = "1"
+		end
+
+		if ingotstack:get_name()=="default:goldblock" then
+				material = "default_gold_block"
+				make_ok = "1"
+		end
+
+		if ingotstack:get_name()=="default:gravel" then
+				material = "default_gravel"
+				make_ok = "1"
+		end
+
+		if ingotstack:get_name()=="default:ice" then
+				material = "default_ice"
+				make_ok = "1"
+		end
+
+		if ingotstack:get_name()=="default:jungletree" then
+				material = "default_jungletree"
+				make_ok = "1"
+		end
+
+		if ingotstack:get_name()=="default:junglewood" then
+				material = "default_junglewood"
+				make_ok = "1"
+		end
+
+		if ingotstack:get_name()=="default:lava_source" then
+				material = "default_lava"
+				make_ok = "1"
+		end
+
+		if ingotstack:get_name()=="default:mese" then
+				material = "default_mese"
+				make_ok = "1"
+		end
+
+		if ingotstack:get_name()=="default:mossycobble" then
+				material = "default_mossycobble"
+				make_ok = "1"
+		end
+
+		if ingotstack:get_name()=="default:obsidian" then
+				material = "default_obsidian"
+				make_ok = "1"
+		end
+
+		if ingotstack:get_name()=="default:obsidian_glass" then
+				material = "default_obsidian_glass"
+				make_ok = "1"
+		end
+
+		if ingotstack:get_name()=="default:obsidianbrick" then
+				material = "default_obsidian_brick"
+				make_ok = "1"
+		end
+
+		if ingotstack:get_name()=="default:pinetree" then
+				material = "default_pinetree"
+				make_ok = "1"
+		end
+
+		if ingotstack:get_name()=="default:sanddstonebrick" then
+				material = "default_sandstone_brick"
+				make_ok = "1"
+		end
+
+		if ingotstack:get_name()=="default:snowblock" then
+				material = "default_snow"
+				make_ok = "1"
+		end
+
+		if ingotstack:get_name()=="default:steelblock" then
+				material = "default_steel_block"
+				make_ok = "1"
+		end
+
+		if ingotstack:get_name()=="default:stonebrick" then
+				material = "default_stone_brick"
+				make_ok = "1"
+		end
+
+		if ingotstack:get_name()=="default:tree" then
+				material = "default_tree"
+				make_ok = "1"
+		end
+
+		if ingotstack:get_name()=="default:water_source" then
+				material = "default_water"
+				make_ok = "1"
+		end
+
+		if ingotstack:get_name()=="farming:straw" then
+				material = "farming_straw"
+				make_ok = "1"
+		end
+
+----------------------------------------------------------------------------
+--wool
+
+		if ingotstack:get_name()=="wool:white" then
+				material = "wool_white"
+				make_ok = "1"
+		end
+		if ingotstack:get_name()=="wool:black" then
+				material = "wool_black"
+				make_ok = "1"
+		end
+		if ingotstack:get_name()=="wool:blue" then
+				material = "wool_blue"
+				make_ok = "1"
+		end
+		if ingotstack:get_name()=="wool:brown" then
+				material = "wool_brown"
+				make_ok = "1"
+		end
+		if ingotstack:get_name()=="wool:cyan" then
+				material = "wool_cyan"
+				make_ok = "1"
+		end
+		if ingotstack:get_name()=="wool:dark_green" then
+				material = "wool_dark_green"
+				make_ok = "1"
+		end
+		if ingotstack:get_name()=="wool:dark_grey" then
+				material = "wool_dark_grey"
+				make_ok = "1"
+		end
+		if ingotstack:get_name()=="wool:green" then
+				material = "wool_green"
+				make_ok = "1"
+		end
+		if ingotstack:get_name()=="wool:grey" then
+				material = "wool_grey"
+				make_ok = "1"
+		end
+		if ingotstack:get_name()=="wool:magenta" then
+				material = "wool_magenta"
+				make_ok = "1"
+		end
+		if ingotstack:get_name()=="wool:orange" then
+				material = "wool_orange"
+				make_ok = "1"
+		end
+		if ingotstack:get_name()=="wool:pink" then
+				material = "wool_pink"
+				make_ok = "1"
+		end
+		if ingotstack:get_name()=="wool:red" then
+				material = "wool_red"
+				make_ok = "1"
+		end
+		if ingotstack:get_name()=="wool:violet" then
+				material = "wool_violet"
+				make_ok = "1"
+		end
+		if ingotstack:get_name()=="wool:yellow" then
+				material = "wool_yellow"
 				make_ok = "1"
 		end
 ----------------------------------------------------------------------
