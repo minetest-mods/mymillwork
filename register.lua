@@ -195,7 +195,7 @@ mymillwork.register_all(--material, description, image, groups, craft item
 mymillwork.register_all(--material, description, image, groups, craft item
 	"default_mese", 
 	"Mese", 
-	"default_mese.png",
+	"default_mese_block.png",
 	"{cracky = 1, oddly_breakable_by_hand = 1,not_in_creative_inventory=1}",
 	"default:mese",
 	"normal"
