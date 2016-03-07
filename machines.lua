@@ -643,7 +643,7 @@ minetest.register_craft({
 		recipe = {
 			{'default:steelblock', 'default:steelblock', 'default:steelblock'},
 			{'default:steelblock', 'default:steel_ingot', 'default:steelblock'},
-			{'default:steelblock', "default:steelblock", 'default:steelblock'},		
+			{'default:steelblock', "default:steelblock", 'default:steelblock'},
 		},
 })
 
