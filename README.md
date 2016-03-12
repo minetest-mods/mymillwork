@@ -1,9 +1,9 @@
 millwork
 ========
 
-Crown Mold, Baseboards, Columns and more
+Crown Mold, Baseboards, Columns and more To minetest
 
-Latest update adds different textures to the millwork. 
+Licence - WTFPL 
 
 If you want to add or remove a texture simply edit the table at the top of millwork.lua file.
 
