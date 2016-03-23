@@ -3,7 +3,7 @@ mymillwork
 
 Crown Mold, Baseboards, Columns and more To minetest
 
-Licence - WTFPL 
+Licence - DWYWPL 
 
 If you want to add or remove a texture simply edit the table at the top of millwork.lua file.
 
