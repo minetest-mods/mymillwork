@@ -1,5 +1,5 @@
 
-function mymillwork.register_all(mat, desc, image, groups, craft)
+function mymillwork.register_all(mat, desc, image, group, itm)
 
 minetest.register_node("mymillwork:crownmould_"..mat, {
 	description = desc.." Crown Mould",
@@ -9,7 +9,7 @@ minetest.register_node("mymillwork:crownmould_"..mat, {
 	paramtype2 = "facedir",
 	sunlight_propagates = true,
 	is_ground_content = true,
-	groups = {cracky = 1, oddly_breakable_by_hand = 1,not_in_creative_inventory=1},
+	groups = group,
 	node_box = {
 		type = "fixed",
 		fixed = {
@@ -43,7 +43,7 @@ minetest.register_node("mymillwork:crownmould_ic_"..mat, {
 	paramtype2 = "facedir",
 	sunlight_propagates = true,
 	is_ground_content = true,
-	groups = {cracky = 1, oddly_breakable_by_hand = 1,not_in_creative_inventory=1},
+	groups = group,
 	node_box = {
 		type = "fixed",
 		fixed = {
@@ -87,7 +87,7 @@ minetest.register_node("mymillwork:crownmould_oc_"..mat, {
 	paramtype2 = "facedir",
 	sunlight_propagates = true,
 	is_ground_content = true,
-	groups = {cracky = 1, oddly_breakable_by_hand = 1,not_in_creative_inventory=1},
+	groups = group,
 	node_box = {
 		type = "fixed",
 		fixed = {
@@ -122,7 +122,7 @@ minetest.register_node("mymillwork:crownmould_beam_"..mat, {
 	paramtype2 = "facedir",
 	sunlight_propagates = true,
 	is_ground_content = true,
-	groups = {cracky = 1, oddly_breakable_by_hand = 1,not_in_creative_inventory=1},
+	groups = group,
 	node_box = {
 		type = "fixed",
 		fixed = {
@@ -159,7 +159,7 @@ minetest.register_node("mymillwork:column_" ..mat, {
 	paramtype2 = "facedir",
 	sunlight_propagates = true,
 	is_ground_content = true,
-	groups = {cracky = 1, oddly_breakable_by_hand = 1,not_in_creative_inventory=1},
+	groups = group,
 	node_box = {
 		type = "fixed",
 		fixed = {
@@ -188,7 +188,7 @@ minetest.register_node("mymillwork:column_base_"..mat, {
 	paramtype2 = "facedir",
 	sunlight_propagates = true,
 	is_ground_content = true,
-	groups = {cracky = 1, oddly_breakable_by_hand = 1,not_in_creative_inventory=1},
+	groups = group,
 	node_box = {
 		type = "fixed",
 		fixed = {
@@ -218,7 +218,7 @@ minetest.register_node("mymillwork:column_half_"..mat, {
 	paramtype2 = "facedir",
 	sunlight_propagates = true,
 	is_ground_content = true,
-	groups = {cracky = 1, oddly_breakable_by_hand = 1,not_in_creative_inventory=1},
+	groups = group,
 	node_box = {
 		type = "fixed",
 		fixed = {
@@ -247,7 +247,7 @@ minetest.register_node("mymillwork:column_half_base_"..mat, {
 	paramtype2 = "facedir",
 	sunlight_propagates = true,
 	is_ground_content = true,
-	groups = {cracky = 1, oddly_breakable_by_hand = 1,not_in_creative_inventory=1},
+	groups = group,
 	node_box = {
 		type = "fixed",
 		fixed = {
@@ -277,7 +277,7 @@ minetest.register_node("mymillwork:column_half_wbeam_"..mat, {
 	paramtype2 = "facedir",
 	sunlight_propagates = true,
 	is_ground_content = true,
-	groups = {cracky = 1, oddly_breakable_by_hand = 1,not_in_creative_inventory=1},
+	groups = group,
 	node_box = {
 		type = "fixed",
 		fixed = {
@@ -315,7 +315,7 @@ minetest.register_node("mymillwork:column_quarter_"..mat, {
 	paramtype2 = "facedir",
 	sunlight_propagates = true,
 	is_ground_content = true,
-	groups = {cracky = 1, oddly_breakable_by_hand = 1,not_in_creative_inventory=1},
+	groups = group,
 	node_box = {
 		type = "fixed",
 		fixed = {
@@ -344,7 +344,7 @@ minetest.register_node("mymillwork:column_quarter_base_"..mat, {
 	paramtype2 = "facedir",
 	sunlight_propagates = true,
 	is_ground_content = true,
-	groups = {cracky = 1, oddly_breakable_by_hand = 1,not_in_creative_inventory=1},
+	groups = group,
 	node_box = {
 		type = "fixed",
 		fixed = {
@@ -374,7 +374,7 @@ minetest.register_node("mymillwork:column_quarter_wbase_"..mat, {
 	paramtype2 = "facedir",
 	sunlight_propagates = true,
 	is_ground_content = true,
-	groups = {cracky = 1, oddly_breakable_by_hand = 1,not_in_creative_inventory=1},
+	groups = group,
 	node_box = {
 		type = "fixed",
 		fixed = {
@@ -406,7 +406,7 @@ minetest.register_node("mymillwork:column_quarter_fancybase_"..mat, {
 	paramtype2 = "facedir",
 	sunlight_propagates = true,
 	is_ground_content = true,
-	groups = {cracky = 1, oddly_breakable_by_hand = 1,not_in_creative_inventory=1},
+	groups = group,
 	node_box = {
 		type = "fixed",
 		fixed = {
@@ -443,7 +443,7 @@ minetest.register_node("mymillwork:ceiling_" ..mat, {
 	paramtype2 = "facedir",
 	sunlight_propagates = true,
 	is_ground_content = true,
-	groups = {cracky = 1, oddly_breakable_by_hand = 1,not_in_creative_inventory=1},
+	groups = group,
 	node_box = {
 		type = "fixed",
 		fixed = {
@@ -468,7 +468,7 @@ minetest.register_node("mymillwork:ceiling_post_"..mat, {
 	paramtype2 = "facedir",
 	sunlight_propagates = true,
 	is_ground_content = true,
-	groups = {cracky = 1, oddly_breakable_by_hand = 1,not_in_creative_inventory=1},
+	groups = group,
 	node_box = {
 		type = "fixed",
 		fixed = {
@@ -497,7 +497,7 @@ minetest.register_node("mymillwork:beam_ceiling_"..mat, {
 	paramtype2 = "facedir",
 	sunlight_propagates = true,
 	is_ground_content = true,
-	groups = {cracky = 1, oddly_breakable_by_hand = 1,not_in_creative_inventory=1},
+	groups = group,
 	node_box = {
 		type = "fixed",
 		fixed = {
@@ -525,7 +525,7 @@ minetest.register_node("mymillwork:beam_ceiling_t_"..mat, {
 	paramtype2 = "facedir",
 	sunlight_propagates = true,
 	is_ground_content = true,
-	groups = {cracky = 1, oddly_breakable_by_hand = 1,not_in_creative_inventory=1},
+	groups = group,
 	node_box = {
 		type = "fixed",
 		fixed = {
@@ -557,7 +557,7 @@ minetest.register_node("mymillwork:beam_" ..mat, {
 	paramtype2 = "facedir",
 	sunlight_propagates = true,
 	is_ground_content = true,
-	groups = {cracky = 1, oddly_breakable_by_hand = 1,not_in_creative_inventory=1},
+	groups = group,
 	node_box = {
 		type = "fixed",
 		fixed = {
@@ -584,7 +584,7 @@ minetest.register_node("mymillwork:beam_t_"..mat, {
 	paramtype2 = "facedir",
 	sunlight_propagates = true,
 	is_ground_content = true,
-	groups = {cracky = 1, oddly_breakable_by_hand = 1,not_in_creative_inventory=1},
+	groups = group,
 	node_box = {
 		type = "fixed",
 		fixed = {
@@ -615,7 +615,7 @@ minetest.register_node("mymillwork:base_" ..mat, {
 	paramtype2 = "facedir",
 	sunlight_propagates = true,
 	is_ground_content = true,
-	groups = {cracky = 1, oddly_breakable_by_hand = 1,not_in_creative_inventory=1},
+	groups = group,
 	node_box = {
 		type = "fixed",
 		fixed = {
@@ -640,7 +640,7 @@ minetest.register_node("mymillwork:base_ic_"..mat, {
 	paramtype2 = "facedir",
 	sunlight_propagates = true,
 	is_ground_content = true,
-	groups = {cracky = 1, oddly_breakable_by_hand = 1,not_in_creative_inventory=1},
+	groups = group,
 	node_box = {
 		type = "fixed",
 		fixed = {
@@ -667,7 +667,7 @@ minetest.register_node("mymillwork:base_oc_"..mat, {
 	paramtype2 = "facedir",
 	sunlight_propagates = true,
 	is_ground_content = true,
-	groups = {cracky = 1, oddly_breakable_by_hand = 1,not_in_creative_inventory=1},
+	groups = group,
 	node_box = {
 		type = "fixed",
 		fixed = {
@@ -692,7 +692,7 @@ minetest.register_node("mymillwork:base_fancy_"..mat, {
 	paramtype2 = "facedir",
 	sunlight_propagates = true,
 	is_ground_content = true,
-	groups = {cracky = 1, oddly_breakable_by_hand = 1,not_in_creative_inventory=1},
+	groups = group,
 	node_box = {
 		type = "fixed",
 		fixed = {
@@ -720,7 +720,7 @@ minetest.register_node("mymillwork:base_fancy_ic_"..mat, {
 	paramtype2 = "facedir",
 	sunlight_propagates = true,
 	is_ground_content = true,
-	groups = {cracky = 1, oddly_breakable_by_hand = 1,not_in_creative_inventory=1},
+	groups = group,
 	node_box = {
 		type = "fixed",
 		fixed = {
@@ -753,7 +753,7 @@ minetest.register_node("mymillwork:base_fancy_oc_"..mat, {
 	paramtype2 = "facedir",
 	sunlight_propagates = true,
 	is_ground_content = true,
-	groups = {cracky = 1, oddly_breakable_by_hand = 1,not_in_creative_inventory=1},
+	groups = group,
 	node_box = {
 		type = "fixed",
 		fixed = {
