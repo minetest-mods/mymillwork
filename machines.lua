@@ -270,6 +270,8 @@ then
 
 local items = {
 	{"default:stone", "default_stone"},
+	{"default:stonebrick", "default_stone_brick"},
+	{"default:cobble", "default_cobble"},
 	{"default:desert_stone", "default_desert_stone"},
 	{"default:sandstone", "default_sandstone"},
 	{"default:clay", "default_clay"},

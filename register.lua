@@ -8,6 +8,22 @@ mymillwork.register_all(
 	)
 
 mymillwork.register_all(
+	"default_stone_brick",
+	"Stone Brick",
+	"default_stone_brick.png",
+	{cracky = 3,not_in_creative_inventory=1},
+	"default:stonebrick"
+	)
+
+mymillwork.register_all(
+	"default_cobble",
+	"Cobble",
+	"default_cobble.png",
+	{cracky = 3,not_in_creative_inventory=1},
+	"default:cobble"
+	)
+
+mymillwork.register_all(
 	"default_desert_stone",
 	"Desert Stone",
 	"default_desert_stone.png",
