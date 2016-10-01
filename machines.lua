@@ -266,27 +266,9 @@ then
 		local ingotstack = inv:get_stack("ingot", 1)
 		local resstack = inv:get_stack("res", 1)
 
---Register Items
-
-local items = {
-	{"default:stone", "default_stone"},
-	{"default:stonebrick", "default_stone_brick"},
-	{"default:cobble", "default_cobble"},
-	{"default:desert_stone", "default_desert_stone"},
-	{"default:sandstone", "default_sandstone"},
-	{"default:clay", "default_clay"},
-	{"default:wood", "default_wood"},
-	{"default:junglewood", "default_junglewood"},
-	{"default:pine_wood", "default_pine_wood"},
-	{"default:pine_acacia", "default_acacia_wood"},
-	{"default:aspen_wood", "default_aspen_wood"},
-	{"default:coalblock", "default_coal_block"},
-	{"default:obsidian", "default_obsidian"}
-	}
-
-	for i in ipairs(items) do
-		local itm = items[i][1]
-		local mat = items[i][2]
+	for i in ipairs(mymillwork.registered) do
+		local itm = mymillwork.registered[i][1]
+		local mat = mymillwork.registered[i][2]
 		if ingotstack:get_name()== itm then
 				material = mat
 				make_ok = "1"
