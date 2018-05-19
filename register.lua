@@ -91,7 +91,7 @@ mymillwork.register_all(
 	"default_coal_block",
 	"Coal Block",
 	"default_coal_block.png",
-	{choppy = 3,not_in_creative_inventory=1},
+	{cracky = 3,not_in_creative_inventory=1},
 	"default:coalblock"
 	)
 
@@ -99,6 +99,6 @@ mymillwork.register_all(
 	"default_obsidian",
 	"Obsidian",
 	"default_obsidian.png",
-	{choppy = 3,not_in_creative_inventory=1},
+	{cracky = 1,not_in_creative_inventory=1},
 	"default:obsidian"
 	)
