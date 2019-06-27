@@ -26,10 +26,10 @@ if minetest.get_modpath("bakedclay") then
 
 	for _,c in ipairs(clay) do
 		mymillwork.register("bakedclay:" .. c[1],
-		    "bakedclay_" .. c[1],
-		    c[2] .. " Clay",
-		    "baked_clay_" .. c[1] .. ".png",
-		    {crumbly = 3, not_in_creative_inventory = mymillwork.nici}
+			"bakedclay_" .. c[1],
+			c[2] .. " Clay",
+			"baked_clay_" .. c[1] .. ".png",
+			{crumbly = 3, not_in_creative_inventory = mymillwork.nici}
 		)
 	end
 
@@ -44,10 +44,10 @@ elseif minetest.get_modpath("ethereal") then
 
 	for _,c in ipairs(clay) do
 		mymillwork.register("bakedclay:" .. c[1],
-		    "bakedclay_" .. c[1],
-		    c[2] .. " Clay",
-		    "baked_clay_" .. c[1] .. ".png",
-		    {crumbly = 3, not_in_creative_inventory = mymillwork.nici}
+			"bakedclay_" .. c[1],
+			c[2] .. " Clay",
+			"baked_clay_" .. c[1] .. ".png",
+			{crumbly = 3, not_in_creative_inventory = mymillwork.nici}
 		)
 	end
 
