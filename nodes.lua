@@ -375,7 +375,7 @@ end
 
 function mymillwork.register_all(suffix, model, mdesc, sbox, cbox, node_suffix, material, desc, image, group)
 
-    minetest.register_node("mymillwork:" .. suffix .. "_" .. node_suffix, {
+    minetest.register_node(":mymillwork:" .. suffix .. "_" .. node_suffix, {
     description = desc .. " " .. mdesc,
     drawtype = "mesh",
     mesh = model,
