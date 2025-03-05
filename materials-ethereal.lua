@@ -8,7 +8,7 @@ if minetest.get_modpath("ethereal") then
 	mymillwork.register("ethereal:bamboo_block",
 		"ethereal_bamboo_block",
 		"Bamboo Block",
-		"bamboo_floor.png",
+		"ethereal_bamboo_floor.png",
 		{tree = 1, choppy = 2, oddly_breakable_by_hand = 1, flammable = 2, not_in_creative_inventory = mymillwork.nici}
 	)
 
@@ -16,7 +16,7 @@ if minetest.get_modpath("ethereal") then
 	mymillwork.register("ethereal:banana_wood",
 		"ethereal_banana_wood",
 		"Banana Wood",
-		"banana_wood.png",
+		"ethereal_banana_wood.png",
 		{tree = 1, choppy = 2, oddly_breakable_by_hand = 1, flammable = 2, not_in_creative_inventory = mymillwork.nici}
 	)
 
@@ -32,7 +32,7 @@ if minetest.get_modpath("ethereal") then
 	mymillwork.register("ethereal:frost_wood",
 		"ethereal_frost_wood",
 		"Frost Wood",
-		"frost_wood.png",
+		"ethereal_frost_wood.png",
 		{tree = 1, choppy = 2, oddly_breakable_by_hand = 1, flammable = 2, not_in_creative_inventory = mymillwork.nici}
 	)
 
@@ -48,7 +48,7 @@ if minetest.get_modpath("ethereal") then
 	mymillwork.register("ethereal:redwood_wood",
 		"ethereal_redwood_wood",
 		"Redwood Wood",
-		"redwood_wood.png",
+		"ethereal_redwood_wood.png",
 		{tree = 1, choppy = 2, oddly_breakable_by_hand = 1, flammable = 2, not_in_creative_inventory = mymillwork.nici}
 	)
 
@@ -64,7 +64,7 @@ if minetest.get_modpath("ethereal") then
 	mymillwork.register("ethereal:willow_wood",
 		"ethereal_willow_wood",
 		"Willow Wood",
-		"willow_wood.png",
+		"ethereal_willow_wood.png",
 		{tree = 1, choppy = 2, oddly_breakable_by_hand = 1, flammable = 2, not_in_creative_inventory = mymillwork.nici}
 	)
 
@@ -72,7 +72,7 @@ if minetest.get_modpath("ethereal") then
 	mymillwork.register("ethereal:yellow_wood",
 		"ethereal_yellow_wood",
 		"Healing Tree Wood",
-		"yellow_wood.png",
+		"ethereal_yellow_wood.png",
 		{tree = 1, choppy = 2, oddly_breakable_by_hand = 1, flammable = 2, not_in_creative_inventory = mymillwork.nici}
 	)
 
