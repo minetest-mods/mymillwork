@@ -92,7 +92,11 @@ on_construct = function(pos)
 		"image_button[3.5,5.5;1,1;mymillwork_mach22.png;base_fancy; ]"..
 		"image_button[4.5,5.5;1,1;mymillwork_mach23.png;base_fancy_ic; ]"..
 		"image_button[5.5,5.5;1,1;mymillwork_mach24.png;base_fancy_oc; ]"..
-		"list[current_player;main;1,7;8,4;]")
+		"list[current_player;main;1,7;8,4;]" ..
+		"listring[current_name;res]" ..
+		"listring[current_player;main]" ..
+		"listring[current_name;ingot]" ..
+		"listring[current_player;main]")
 	meta:set_string("infotext", "Millwork Machine")
 	local inv = meta:get_inventory()
 	inv:set_size("ingot", 1)
